@@ -1,0 +1,300 @@
+.dark-mode-toggle i {
+    font-size: 20px;
+}
+
+.dark-mode-toggle:hover i {
+    color: #27303D;
+    transition: color 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #27303D;
+    color: white;
+}
+
+header {
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+   background-color: #2B9920;
+}
+
+header h1 {
+    margin: 0;
+    display: flex;
+   
+}
+
+header h1 img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.hamburger {
+    margin-left: auto; /* Pushes hamburger to the right */
+   padding-right: 10px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    transition: font-weight 0.3s ease;
+}
+
+nav ul li a:hover {
+    font-weight: 700;
+}
+
+.dark-mode-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+section {
+    background: #ffffff0f;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: justify;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    text-align: center;
+    /*color: #2B9920;*/
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+section h3 {
+    /*color: #2B9920;*/
+    margin: 20px 0;
+}
+
+section ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ffffff1a;
+}
+
+section ul li:last-child {
+    border-bottom: none;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2B9920;
+    color: white;
+}
+
+.centered-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #2B9920;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.instructor-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.instructor {
+    flex: 0 0 100%; /* Full width for each slide */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.instructor-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.instructor img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+.instructor h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.instructor p {
+    text-align: justify;
+    margin: 10px 0 0 0;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white; /* Default arrow color */
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    z-index: 100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Circular handlers */
+}
+
+.carousel-nav:hover {
+    color: white; /* Keep arrow color white */
+    background-color: #2B9920; /* Green background on hover */
+}
+
+.carousel-nav.prev {
+    left: 10px;
+}
+
+.carousel-nav.next {
+    right: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        position: relative;
+    }
+ 
+    .hamburger {
+        display: flex;
+        z-index: 100;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #2B9920;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .dark-mode-toggle {
+        display: none;
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 20px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .carousel-nav.prev {
+        left: 10px; /* Move to the left on small screens */
+    }
+
+    .carousel-nav.next {
+        right: 10px; /* Move to the right on small screens */
+    }
+}
