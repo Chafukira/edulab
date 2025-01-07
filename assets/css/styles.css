@@ -7,6 +7,17 @@
     transition: color 0.3s ease;
 }
 
+.dark-mode-toggle {
+    flex-basis: 200px;  /* Match logo width for balance */
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -20,23 +31,32 @@ body {
     
 }
 
-header {
-    position: fixed; /* Makes the header fixed */
-    top: 0; /* Positions the header at the top of the viewport */
-    left: 0;
-    width: 100%; /* Ensures the header spans the entire width of the viewport */
-    z-index: 1000; /* Keeps the header above other elements */
+/* Container to match body width */
+header > * {
+    width: 1200px;
+    margin: 0 auto;
     display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 10px 20px;
-   background-color: #2B9920;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #2B9920;
 }
 
 header h1 {
     margin: 0;
-    display: flex;
-   
+    flex-basis: 200px;  /* Adjust based on your logo size */
 }
 
 header h1 img {
@@ -63,8 +83,8 @@ header h1 img {
 nav {
     display: flex;
     justify-content: center;
-    flex-grow: 1;
-    margin: 0 20px;
+    /* Remove flex-grow to prevent expansion */
+    flex-grow: 0;
 }
 
 nav ul {
@@ -72,6 +92,8 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
+    /* Ensure menu items are centered */
+    justify-content: center;
 }
 
 nav ul li {
@@ -89,13 +111,6 @@ nav ul li a:hover {
     font-weight: 700;
 }
 
-.dark-mode-toggle {
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-}
 
 section {
     background: #ffffff0f;
@@ -245,6 +260,11 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+
+    header > * {
+        width: 100%;
+        padding: 0 20px;
+    }
 
     header {
         position: fixed; /* Ensure the fixed positioning applies here too */
