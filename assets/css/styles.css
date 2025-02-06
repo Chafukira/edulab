@@ -31,6 +31,54 @@ body {
     
 }
 
+/*tablez*/
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #27303D;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: #2B9920;
+    font-weight: bold;
+}
+a:hover {
+    color: #1a6f15;
+}
+@media (max-width: 600px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+    th {
+        display: none;
+    }
+    td {
+        border: none;
+        padding: 8px 0;
+    }
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        color: #27303D;
+    }
+}
+/*end of tables*/
+
 /* Container to match body width */
 header > * {
     width: 1200px;
