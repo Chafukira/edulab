@@ -31,7 +31,7 @@ body {
     
 }
 
-/*tablez*/
+/*------------------------------------------------------------------------tablez*/
 .table-container {
     width: 100%;
     overflow-x: auto;
@@ -76,8 +76,11 @@ a:hover {
         display: block;
         color: #27303D;
     }
+    tr{
+        border-bottom: 1px solid #ddd;
+    }
 }
-/*end of tables*/
+/*----------------------------------------------------------------end of tables*/
 
 /* Container to match body width */
 header > * {
