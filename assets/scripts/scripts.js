@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", updateCarousel);
 });
 
-function playVideo() {
-    const videoPlayer = document.getElementById('videoPlayer');
+function playVideo(videoId) {
+    const videoPlayer = document.getElementById(videoId);
     
     // Show the video player
     videoPlayer.style.display = 'block';

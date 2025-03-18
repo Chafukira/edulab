@@ -41,7 +41,9 @@
         <h2>MSCE Computer Studies Videos.</h2>
         <br>
         <p>This section provides vidoes on various computer studies concept to help you understand better.</p>
-
+        <br>
+        <p><strong>Available Resources: 02</strong></p>
+        <br>
 
         <div class="table-container">
             <table>
@@ -58,10 +60,23 @@
                         <td data-label="Form">Form 4</td>
                         <td data-label="Action">
                             <!-- Play button to trigger video playback -->
-                            <button onclick="playVideo()">▶️</button>
+                            <button onclick="playVideo('videoPlayer1')">▶️</button>
                             <!-- Video element (hidden by default) -->
-                            <video id="videoPlayer" controls style="display: none;">
+                            <video id="videoPlayer1" controls style="display: none;">
                                 <source src="../../assets/files/com/videos/OSI Model..mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Paper">🎬 Visual Basic Sample Program</td>
+                        <td data-label="Form">Form 3</td>
+                        <td data-label="Action">
+                            <!-- Play button to trigger video playback -->
+                            <button onclick="playVideo('videoPlayer2')">▶️</button>
+                            <!-- Video element (hidden by default) -->
+                            <video id="videoPlayer2" controls style="display: none;">
+                                <source src="../../assets/files/com/videos/basic.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </td>
@@ -71,7 +86,7 @@
         </div>
 
         <br>
-        <p><strong>Available Resources: 03</strong></p>
+        <p><strong>Total Resources: 02</strong></p>
     </section>
 
 
