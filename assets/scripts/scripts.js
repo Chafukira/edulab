@@ -47,3 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Adjust carousel on window resize
     window.addEventListener("resize", updateCarousel);
 });
+
+function playVideo() {
+    const videoPlayer = document.getElementById('videoPlayer');
+    
+    // Show the video player
+    videoPlayer.style.display = 'block';
+    
+    // Play the video
+    videoPlayer.play();
+    
+    // Request fullscreen mode
+    if (videoPlayer.requestFullscreen) {
+        videoPlayer.requestFullscreen();
+    } else if (videoPlayer.mozRequestFullScreen) { // Firefox
+        videoPlayer.mozRequestFullScreen();
+    } else if (videoPlayer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+        videoPlayer.webkitRequestFullscreen();
+    } else if (videoPlayer.msRequestFullscreen) { // IE/Edge
+        videoPlayer.msRequestFullscreen();
+    }
+}
